@@ -47,7 +47,7 @@ The design of the medical large model Q&A system includes the following modules:
 - **Requirement number**: AIbot_001
 - **Function name**: Login
 - **Function description**: The user enters the username and password, which are sent to the server for verification. If the verification is successful, the user enters the large model response interface; if the user is not registered, the user is prompted to register.
-![login page ](123/p1/png)
+![login page ](123/p1.png)
 #### 2.1.2 Registration
 - **Requirement number**: AIbot_002
 - **Function name**: Registration
