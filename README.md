@@ -1,141 +1,141 @@
 # LLM-projects
 LLM based on langchain
 
-# 寻医问药小管家项目
+# Seeking Medical Advice and Medicine Butler Project
 
-## 1. 项目需求概述
+## 1. Project Requirements Overview
 
-### 1.1 概述
-“寻医问药小管家”项目旨在通过先进的人工智能技术，为用户提供一个便捷、智能的医疗咨询服务平台。系统主要分为三大模块：
-- **智能问答交互**：系统通过智能问答模型与用户进行互动，提供医疗咨询和建议。
-- **医疗数据库管理**：管理员可对医疗数据库进行查询、修改、添加和删除操作。
-- **用户管理**：系统提供用户登录、注册以及用户信息管理功能。
+### 1.1 Overview
+The "Seeking Medical Advice and Medicine Butler" project aims to provide users with a convenient and intelligent medical consultation service platform through advanced artificial intelligence technology. The system is mainly divided into three modules:
+- **Intelligent Q&A Interaction**: The system interacts with users through intelligent Q&A models to provide medical consultation and suggestions.
+- **Medical Database Management**: Administrators can query, modify, add and delete medical databases.
+- **User Management**: The system provides user login, registration and user information management functions.
 
-该系统基于 Streamlit 框架设计，客户端负责界面设计和交互，服务端负责数据管理及查询结果返回。
+The system is designed based on the Streamlit framework. The client is responsible for interface design and interaction, and the server is responsible for data management and query result return.
 
-### 1.2 主要功能
-医药大模型问答系统的设计包括以下模块：
-| 序号 | 模块名称           | 主要功能                                                                 |
+### 1.2 Main Functions
+The design of the medical large model Q&A system includes the following modules:
+| Serial number | Module name | Main function |
 | ---- | ------------------ | ------------------------------------------------------------------------ |
-| 1    | 用户管理模块       | 实现用户登录、注册和信息管理。                                            |
-| 2    | 问答交互管理模块   | 支持用户选择大模型、诊断智能化、文件上传诊断、多对话窗口功能。             |
-| 3    | 医疗数据库管理模块 | 数据爬取与整理、MySQL 数据库连接。                                       |
+| 1 | User management module | Realize user login, registration and information management. |
+| 2 | Question and answer interactive management module | Supports users to select large models, intelligent diagnosis, file upload diagnosis, and multiple dialogue window functions. |
+| 3 | Medical database management module | Data crawling and sorting, MySQL database connection. |
 
-### 1.3 运行环境
+### 1.3 Operating environment
 
-#### 1. 软件环境
+#### 1. Software environment
 
-| 分类            | 名称                   | 版本       | 语言        |
+| Category | Name | Version | Language |
 | --------------- | ---------------------- | ---------- | ----------- |
-| 操作系统        | Windows/Linux          | 7+/centos7 | 简体中文    |
-| 数据库平台      | MySQL                  | 5+         | 简体中文    |
-| 开发工具        | Visual Studio Code     | 1.91.1.0   |             |
-| 框架            | 无                     |            |             |
+| Operating system | Windows/Linux | 7+/centos7 | Simplified Chinese |
+| Database platform | MySQL | 5+ | Simplified Chinese |
+| Development tool | Visual Studio Code | 1.91.1.0 | |
+| Framework | None | | |
 
-#### 2. 硬件环境
+#### 2. Hardware environment
 
-| 开发电脑      | 最低配置              | 推荐配置                |
+| Development computer | Minimum configuration | Recommended configuration |
 | ------------- | --------------------- | ----------------------- |
-| CPU           | Intel i5               | Intel i5 及以上         |
-| 内存          | 16G                    | 16G                     |
+| CPU | Intel i5 | Intel i5 and above |
+| Memory | 16G | 16G |
 
-## 2. 功能需求
+## 2. Functional requirements
 
-### 2.1 登录注册
+### 2.1 Login and registration
 
-#### 2.1.1 登录
-- **需求编号**: AIbot_001
-- **功能名称**: 登录
-- **功能描述**: 用户输入用户名和密码，发送至服务器验证，若验证成功则进入大模型应答界面；若未注册则提示注册。
+#### 2.1.1 Login
+- **Requirement number**: AIbot_001
+- **Function name**: Login
+- **Function description**: The user enters the username and password, which are sent to the server for verification. If the verification is successful, the user enters the large model response interface; if the user is not registered, the user is prompted to register.
 
-#### 2.1.2 注册
-- **需求编号**: AIbot_002
-- **功能名称**: 注册
-- **功能描述**: 用户输入用户名和密码，发送至服务器验证用户名的唯一性，若验证通过则创建账号，并加密存储密码。
+#### 2.1.2 Registration
+- **Requirement number**: AIbot_002
+- **Function name**: Registration
+- **Function description**: The user enters the username and password, which are sent to the server to verify the uniqueness of the username. If the verification is successful, the user creates an account and stores the password in encrypted form.
 
-### 2.2 大模型切换
+### 2.2 Large model switching
 
-#### 2.2.1 自选大模型
-- **需求编号**: AIbot_003
-- **功能名称**: 自选大模型
-- **功能描述**: 用户选择大模型类型，系统验证并加载相应的模型进行问答交互。
+#### 2.2.1 Self-selected large model
+- **Requirement number**: AIbot_003
+- **Function name**: Self-selected large model
+- **Function description**: The user selects the large model type, and the system verifies and loads the corresponding model for question-and-answer interaction.
 
-#### 2.2.2 诊断智能化
-- **需求编号**: AIbot_004
-- **功能名称**: 诊断智能化
-- **功能描述**: 用户输入病症描述，系统调用选定的大模型进行诊断并返回结果。
+#### 2.2.2 Intelligent diagnosis
+- **Requirement number**: AIbot_004
+- **Function name**: Intelligent diagnosis
+- **Function description**: The user enters the description of the disease, and the system calls the selected large model for diagnosis and returns the result.
 
-#### 2.2.3 文件上传诊断功能
-- **需求编号**: AIbot_005
-- **功能名称**: 文件上传诊断功能
-- **功能描述**: 用户上传医疗相关文档，系统读取文件内容并发送至大模型进行分析。
+#### 2.2.3 File upload diagnosis function
+- **Requirement number**: AIbot_005
+- **Function name**: File upload diagnosis function
+- **Function description**: The user uploads medical-related documents, and the system reads the file content and sends it to the large model for analysis.
 
-#### 2.2.4 多个对话窗口
-- **需求编号**: AIbot_006
-- **功能名称**: 多个对话窗口
-- **功能描述**: 提供多个独立的对话窗口，用户可同时在不同窗口中进行医疗咨询。
+#### 2.2.4 Multiple dialogue windows
+- **Requirement number**: AIbot_006
+- **Function name**: Multiple dialogue windows
+- **Function description**: Provide multiple independent dialogue windows, and users can conduct medical consultations in different windows at the same time.
 
-## 3. 非功能性需求
+## 3. Non-functional requirements
 
-### 3.1 前端需求
+### 3.1 Front-end requirements
 
-#### 3.1.1 开始界面
-- **需求编号**: UI_001
-- **功能名称**: 开始界面
-- **功能描述**: 界面显示欢迎语“欢迎使用寻医问药小管家”，并展示相关主题图片，用户可点击“开始使用”进入系统。
+#### 3.1.1 Start interface
+- **Requirement number**: UI_001
+- **Function name**: Start interface
+- **Function description**: The interface displays the welcome message "Welcome to the medical consultation manager" and displays relevant theme pictures. Users can click "Start using" to enter the system.
 
-#### 3.1.2 登录界面
-- **需求编号**: UI_002
-- **功能名称**: 登录界面
-- **功能描述**: 用户输入用户名和密码进行身份验证，若验证成功则进入主界面，否则提示错误信息。
+#### 3.1.2 Login interface
+- **Requirement number**: UI_002
+- **Function name**: Login interface
+- **Function description**: The user enters the user name and password for identity authentication. If the authentication is successful, the main interface is entered. Otherwise, an error message is prompted.
 
-#### 3.1.3 注册界面
-- **需求编号**: UI_003
-- **功能名称**: 注册界面
-- **功能描述**: 用户输入用户名和密码，系统验证用户名是否唯一并创建新用户。
+#### 3.1.3 Registration interface
+- **Requirement number**: UI_003
+- **Function name**: Registration interface
+- **Function description**: The user enters the user name and password, and the system verifies whether the user name is unique and creates a new user.
 
-#### 3.1.4 主界面侧边栏
-- **需求编号**: UI_004
-- **功能名称**: 主界面侧边栏
-- **功能描述**: 提供用户创建或选择对话窗口、切换大模型、上传文件等选项。
+#### 3.1.4 Main interface sidebar
+- **Requirement number**: UI_004
+- **Function name**: Main interface sidebar
+- **Function description**: Provide users with options such as creating or selecting dialog windows, switching large models, and uploading files.
 
-#### 3.1.5 主界面对话栏
-- **需求编号**: UI_005
-- **功能名称**: 主界面对话栏
-- **功能描述**: 用户输入问题或上传文件，系统处理并展示诊断结果。
+#### 3.1.5 Main interface dialog bar
+- **Requirement number**: UI_005
+- **Function name**: Main interface dialog bar
+- **Function description**: Users enter questions or upload files, and the system processes and displays diagnostic results.
 
-#### 3.1.6 设置界面
-- **需求编号**: UI_006
-- **功能名称**: 设置界面
-- **功能描述**: 提供 API Key 输入和大模型切换功能。
+#### 3.1.6 Settings interface
+- **Requirement number**: UI_006
+- **Function name**: Settings interface
+- **Function description**: Provide API Key input and large model switching functions.
 
-### 3.2 后端需求
+### 3.2 Backend requirements
 
-#### 3.2.1 数据下载和整理
-- **需求编号**: Database_001
-- **功能名称**: 数据下载和整理
-- **功能描述**: 下载医疗数据源并转化为可用格式，定期更新数据。
+#### 3.2.1 Data download and collation
+- **Requirement number**: Database_001
+- **Function name**: Data download and collation
+- **Function description**: Download medical data sources and convert them into usable formats, and update data regularly.
 
-#### 3.2.2 MySQL 连接
-- **需求编号**: Database_002
-- **功能名称**: MySQL 连接
-- **功能描述**: 处理数据的增删改查操作，确保数据安全与性能。
+#### 3.2.2 MySQL connection
+- **Requirement number**: Database_002
+- **Function name**: MySQL connection
+- **Function description**: Process data addition, deletion, modification and query operations to ensure data security and performance.
 
-## 4. 项目总结
+## 4. Project summary
 
-### 4.1 项目概括
-“寻医问药小管家”通过 Streamlit 框架为用户提供智能化的医疗咨询服务，系统设计围绕智能问答交互、用户管理和医疗数据库管理三大核心模块。
+### 4.1 Project overview
+"Xunyiwenyao Xiaoguanjia" provides users with intelligent medical consultation services through the Streamlit framework. The system design revolves around three core modules: intelligent question-and-answer interaction, user management, and medical database management.
 
-### 4.2 项目成果
-- 实现智能问答交互，支持大模型切换、诊断智能化、文件上传诊断等功能。
-- 完成用户管理功能，保障用户数据安全。
-- 医疗数据库管理模块支持数据爬取和 MySQL 连接。
+### 4.2 Project results
+- Realize intelligent question-and-answer interaction, support large model switching, intelligent diagnosis, file upload diagnosis and other functions.
+- Complete user management functions to ensure user data security.
+- The medical database management module supports data crawling and MySQL connection.
 
-### 4.3 技术实现
-项目采用 Streamlit 进行网络编程，客户端负责界面交互，服务端处理数据和返回查询结果。
+### 4.3 Technical Implementation
+The project uses Streamlit for network programming. The client is responsible for interface interaction, and the server processes data and returns query results.
 
-### 4.4 功能亮点
-- 支持用户自选大模型。
-- 实现智能化诊断功能。
-- 支持医疗文档的文件上传诊断。
-- 提供多个对话窗口独立咨询服务。
+### 4.4 Functional Highlights
+- Supports users to select large models.
+- Realizes intelligent diagnosis function.
+- Supports file upload diagnosis of medical documents.
+- Provides independent consulting services in multiple dialogue windows.
