@@ -1,7 +1,7 @@
 # LLM-projects
 LLM based on langchain
 
-# Seeking Medical Advice and Medicine Butler Project
+# Seeking Medical Advice Project- Based On LLM 
 
 ## 1. Project Requirements Overview
 
