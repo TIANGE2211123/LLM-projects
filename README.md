@@ -112,7 +112,9 @@ The design of the medical large model Q&A system includes the following modules:
 - **Requirement number**: UI_005
 - **Function name**: Main interface dialog bar
 - **Function description**: Users enter questions or upload files, and the system processes and displays diagnostic results.
+  
 ![Main interface dialog bar ](123/p15.png)
+
 ![Main interface dialog bar ](123/p16.png)
 
 #### 3.1.6 Settings interface
